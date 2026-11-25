@@ -1,0 +1,430 @@
+# =============================================================================
+# Python Engineering & Scientific Computing
+# =============================================================================
+# Supported environments:
+#   - Python 3.12+
+#   - uv
+#   - Spyder
+#   - JetBrains / PyCharm
+#   - Visual Studio Code
+#   - Linux / Windows / macOS
+#
+# Repository principles:
+#   - Track source code, tests, and technical documentation.
+#   - Track dependency definitions and lockfiles.
+#   - Track reproducible engineering input datasets.
+#   - Exclude local environments, caches, and generated artifacts.
+#   - Never commit credentials or confidential information.
+# =============================================================================
+
+
+# =============================================================================
+# 01. Python Bytecode and Interpreter Artifacts
+# =============================================================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+
+# =============================================================================
+# 02. Virtual Environments
+# =============================================================================
+
+.venv/
+venv/
+env/
+ENV/
+.conda/
+.venv.bak/
+venv.bak/
+env.bak/
+__pypackages__/
+
+
+# =============================================================================
+# 03. Package Management
+# =============================================================================
+
+# uv
+.uv-cache/
+
+# pip
+.pip-cache/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Local Python interpreter overrides
+.python-version.local
+
+# Dependency definitions and lockfiles remain tracked.
+!pyproject.toml
+!uv.lock
+!requirements*.txt
+!.python-version
+
+
+# =============================================================================
+# 04. Build and Distribution Artifacts
+# =============================================================================
+
+/build/
+/dist/
+/develop-eggs/
+/downloads/
+/eggs/
+/parts/
+/sdist/
+/wheels/
+/pip-wheel-metadata/
+
+.eggs/
+*.egg-info/
+*.egg
+*.whl
+.installed.cfg
+MANIFEST
+
+
+# =============================================================================
+# 05. Spyder IDE
+# =============================================================================
+
+.spyproject/
+.spyderproject/
+.spyderworkspace/
+.spyder-py3/
+.spyder/
+.spydata
+
+# Serialized Spyder workspace data
+*.spydata
+
+
+# =============================================================================
+# 06. JetBrains IDEs / PyCharm
+# =============================================================================
+
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# JetBrains local history
+.idea_modules/
+
+
+# =============================================================================
+# 07. Visual Studio Code
+# =============================================================================
+
+.vscode/*
+*.code-workspace
+
+# Permit intentionally shared project configuration.
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# Local VS Code history
+.history/
+.ionide/
+
+
+# =============================================================================
+# 08. Jupyter and IPython
+# =============================================================================
+
+.ipynb_checkpoints/
+.ipython/
+profile_default/
+ipython_config.py
+
+# Jupyter notebooks remain tracked.
+
+
+# =============================================================================
+# 09. Testing and Code Coverage
+# =============================================================================
+
+.pytest_cache/
+.tox/
+.nox/
+.hypothesis/
+
+.coverage
+.coverage.*
+coverage.xml
+coverage.json
+htmlcov/
+.coverage_html/
+
+nosetests.xml
+pytest-report.xml
+test-results.xml
+
+/test-results/
+/test-reports/
+
+
+# =============================================================================
+# 10. Static Analysis, Formatting, and Type Checking
+# =============================================================================
+
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+.ruff_cache/
+.pytype/
+.pyre/
+.pyright/
+.pylint.d/
+.cache/
+.bandit-cache/
+
+# Tool configuration files remain tracked.
+
+
+# =============================================================================
+# 11. Documentation Build Artifacts
+# =============================================================================
+
+/docs/_build/
+/docs/build/
+/docs/.doctrees/
+/site/
+
+# Markdown, source documentation, engineering references,
+# and verification documentation remain tracked.
+
+
+# =============================================================================
+# 12. Scientific Computing and Numerical Modeling
+# =============================================================================
+
+# Generated numerical caches
+*.nbi
+*.nbc
+
+# Generated profiling and diagnostic artifacts
+*.prof
+*.lprof
+*.pstats
+*.pyprof
+
+# Generated simulation artifacts
+/simulation_cache/
+/simulation_runs/
+/model_runs/
+/outputs/generated/
+/results/generated/
+/artifacts/generated/
+
+# Scientific datasets are NOT globally ignored.
+# Examples of intentionally tracked formats:
+#
+#   *.csv
+#   *.json
+#   *.yaml
+#   *.xlsx
+#   *.parquet
+#   *.npy
+#   *.npz
+#   *.inp
+#   *.rpt
+#
+# Engineering inputs and benchmark results may be required
+# for reproducibility and independent verification.
+
+
+# =============================================================================
+# 13. Local and Confidential Data
+# =============================================================================
+
+/data/raw/private/
+/data/confidential/
+/data/local/
+/data/generated/
+
+/inputs/private/
+/inputs/local/
+
+/outputs/private/
+/results/private/
+
+/scratch/
+/sandbox/
+/tmp/
+/temp/
+
+# Retain directory placeholders where applicable.
+!/data/raw/private/.gitkeep
+!/data/confidential/.gitkeep
+!/data/local/.gitkeep
+!/data/generated/.gitkeep
+
+
+# =============================================================================
+# 14. Machine Learning Artifacts
+# =============================================================================
+
+/checkpoints/
+/mlruns/
+/wandb/
+/lightning_logs/
+/tensorboard_logs/
+/models/generated/
+/models/checkpoints/
+
+# Trained models and serialized scientific objects should
+# be evaluated individually before being committed.
+#
+# Do not globally exclude model files if they are required
+# for verification, deployment, or reproducibility.
+
+
+# =============================================================================
+# 15. Environment Variables and Secrets
+# =============================================================================
+
+.env
+.env.*
+!.env.example
+!.env.template
+!.env.sample
+
+.envrc.local
+
+/secrets/
+/credentials/
+
+credentials.json
+service-account.json
+service_account.json
+secrets.json
+secrets.yaml
+secrets.yml
+
+*.pem
+*.key
+*.p12
+*.pfx
+
+.netrc
+.pypirc
+
+# Never commit passwords, tokens, API keys, or private keys.
+
+
+# =============================================================================
+# 16. Local Databases
+# =============================================================================
+
+*.sqlite
+*.sqlite3
+*.sqlite-journal
+*.sqlite3-journal
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite3-wal
+*.sqlite3-shm
+
+# Database schemas, migrations, and seed scripts remain tracked.
+
+
+# =============================================================================
+# 17. Logs and Runtime Artifacts
+# =============================================================================
+
+*.log
+*.pid
+*.pid.lock
+*.sock
+*.stackdump
+
+/logs/
+/runtime/
+
+
+# =============================================================================
+# 18. Temporary Files and Editor Backups
+# =============================================================================
+
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+*.rej
+*.swp
+*.swo
+*.swn
+*~
+
+\#*\#
+.\#*
+
+.nano_history
+
+
+# =============================================================================
+# 19. Linux Operating System
+# =============================================================================
+
+.directory
+.Trash-*
+.nfs*
+.fuse_hidden*
+
+
+# =============================================================================
+# 20. Windows Operating System
+# =============================================================================
+
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+
+# =============================================================================
+# 21. macOS Operating System
+# =============================================================================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100/
+.Trashes/
+.fseventsd/
+.TemporaryItems/
+.VolumeIcon.icns
+._*
+
+
+# =============================================================================
+# 22. Local Development Configuration
+# =============================================================================
+
+config.local.json
+config.local.yaml
+config.local.yml
+config.local.toml
+settings.local.json
+settings.local.yaml
+settings.local.toml
+
+docker-compose.override.yml
+compose.override.yaml
+
+
+# =============================================================================
+# End of .gitignore
+# =============================================================================
