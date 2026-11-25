@@ -51,9 +51,13 @@ Created on Wed Nov 25 01:07:54 2026
 num = 1245.1256745687
 
 # Traditional string formatting
-print("Traditional Result:")
+print("\nTraditional Result:")
 print("{:7.2f}\n".format(num))
 
 # Modern f-string formatting
 print("Modern f-string Result:")
-print(f"{num:7.2f}")
+print(f"{num:7.2f}\n")
+
+# Scientific Notation
+print("Scientific Notation")
+print(f'{num:.2e}')

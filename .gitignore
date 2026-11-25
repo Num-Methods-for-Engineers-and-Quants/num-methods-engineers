@@ -256,6 +256,10 @@ dmypy.json
 /outputs/private/
 /results/private/
 
+# Generated computational outputs at any directory depth
+outputs/
+
+
 /scratch/
 /sandbox/
 /tmp/
