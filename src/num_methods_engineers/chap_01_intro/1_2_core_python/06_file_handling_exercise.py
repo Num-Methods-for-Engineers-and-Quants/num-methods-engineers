@@ -6,3 +6,4 @@ Created on Wed Nov 25 02:47:20 2026
 @author: brice-nelson
 """
 
+file = "outputs/groundwater_pumping_test_data.txt"
